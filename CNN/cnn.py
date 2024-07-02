@@ -28,8 +28,8 @@ def extract_videos_from_folder(folder_path):
 
 # Prepare training set and test set
 # path of folder
-folder_path_train = 'EE6222 train and validate 2023/train/total'
-folder_path_test = 'EE6222 train and validate 2023/validate'
+folder_path_train = 'your_training_videos'
+folder_path_test = 'your_validation_videos'
 train_videos = extract_videos_from_folder(folder_path_train)
 print(train_videos)
 test_videos = extract_videos_from_folder(folder_path_test)
