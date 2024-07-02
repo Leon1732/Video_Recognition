@@ -41,12 +41,12 @@ def feature_extract(frame_extract):
     return pooled_frame
 
 # 视频文件所在的文件夹路径
-train_set = np.array(['EE6222 train and validate 2023/train/Jump',
-                      'EE6222 train and validate 2023/train/Run',
-                      'EE6222 train and validate 2023/train/Sit',
-                      'EE6222 train and validate 2023/train/Stand',
-                      'EE6222 train and validate 2023/train/Turn',
-                      'EE6222 train and validate 2023/train/Walk'])
+train_set = np.array(['your_training_videos/Jump',
+                      'your_training_videos/Run',
+                      'your_training_videos/Sit',
+                      'your_training_videos/Stand',
+                      'your_training_videos/Turn',
+                      'your_training_videos/Walk'])
 
 for i in range(6):
     # 获取文件夹中所有视频文件的路径
@@ -93,7 +93,7 @@ svm_classifier = svm.SVC(kernel='linear')  # 选择线性核SVM，也可以选�
 svm_classifier.fit(train_features, train_labels)
 
 
-test_set = 'EE6222 train and validate 2023/validate'  # 替换为您的视频文件路径
+test_set = 'your_validation_videos'  # 替换为您的视频文件路径
 # 获取文件夹中的所有文件
 test_video_files = [f for f in os.listdir(test_set) if os.path.isfile(os.path.join(test_set, f))]
 
