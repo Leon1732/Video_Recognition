@@ -61,7 +61,7 @@ def extract_videos_from_folder(folder_path):
 
 # 加载训练数据和标签
 def load_data():
-    second_root_dir = 'EE6222 train and validate 2023/train'  # 替换为包含多个二级文件夹的根文件夹路径
+    second_root_dir = 'your_training_videos'  # 替换为包含多个二级文件夹的根文件夹路径
     # 提取所有视频的路径并按顺序排列
     train_videos = extract_videos_from_folders(second_root_dir)
     train_labels = np.concatenate([
@@ -89,7 +89,7 @@ def load_data():
 
 # 加载测试数据和标签
 def load_test_data():
-    folder_path = 'EE6222 train and validate 2023/validate'  # 替换为包含多个视频的文件夹路径
+    folder_path = 'your_validation_videos'  # 替换为包含多个视频的文件夹路径
     test_videos = extract_videos_from_folder(folder_path)
     test_labels = np.concatenate([
         np.repeat(0, 17),
